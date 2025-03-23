@@ -1,0 +1,49 @@
+# -----------------------------------------------------
+# Window rules
+# -----------------------------------------------------
+
+windowrule = tile,^(Microsoft-edge)$
+windowrule = tile,^(Brave-browser)$
+windowrule = tile,^(Chromium)$
+windowrule = float,^(pavucontrol)$
+windowrule = float,^(blueman-manager)$
+windowrule = float,^(nm-connection-editor)$
+windowrule = float,^(qalculate-gtk)$
+
+# Browser Picture in Picture
+windowrulev2 = float, title:^(Picture-in-Picture)$
+windowrulev2 = pin, title:^(Picture-in-Picture)$
+windowrulev2 = move 69.5% 4%, title:^(Picture-in-Picture)$
+#Clockify
+windowrule = float, ^(Clockify)$
+windowrule = size 515 640, ^(Clockify)$
+windowrule = move 833 67, ^(Clockify)$
+
+# Pomodorolm: esquina superior derecha, flotante
+windowrule = size 240 325,^(pomodorolm)$
+windowrule = float,^(pomodorolm)$
+windowrule = move 100%-260 30,^(pomodorolm)$s
+
+# Pomotroid: esquina superior derecha, flotante
+windowrule = size 240 325,^(pomotroid)$
+windowrule = float,^(pomodorolm)$
+windowrule = move 100%-260 30,^(pomotroid)$
+
+
+
+# gnome-pomodoro: esquina superior derecha, flotante
+#windowrule = size 240 325,^(gnome-pomodoro)$
+#windowrule = float,^(gnome-pomodoro)$
+#windowrule = move 100%-260 30,^(gnome-pomodoro)$
+
+# Obsidian: espacio de trabajo 10, pantalla completa
+windowrule = workspace 10,^(obsidian)$
+windowrule = fullscreen,^(obsidian)$
+
+# VSCodium: pantalla completa
+windowrule = fullscreen,^(codium)$
+
+# Slack en Qutebrowser
+windowrulev2 = float,class:^(org.qutebrowser.qutebrowser)$,title:^(.+app\.slack\.com.+T07J68HS0K1.+)$
+windowrulev2 = size 784 614,class:^(org.qutebrowser.qutebrowser)$,title:^(.+app\.slack\.com.+T07J68HS0K1.+)$
+
