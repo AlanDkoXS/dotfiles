@@ -20,7 +20,7 @@ return {
       workspaces = {
         {
           name = "Notas", -- Name of the workspace
-          path = "~/Documentos/Notas", -- Path to the notes directory
+          path = "~/Documentos/Notas/", -- Path to the notes directory
         },
       },
 
