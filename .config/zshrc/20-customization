@@ -32,11 +32,20 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------------
 source <(fzf --zsh)
 
-# zsh history
+# -----------------------------------------------------
+# ZSH history
+# -----------------------------------------------------
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory
+
+# History optinons
+setopt SHARE_HISTORY          # Comparte historial entre sesiones
+setopt APPEND_HISTORY         # Añade al historial
+setopt INC_APPEND_HISTORY     # Añade comandos al historial inmediatamente
+setopt EXTENDED_HISTORY       # Añade timestamp al historial
+setopt HIST_IGNORE_DUPS       # No duplicar entradas
+setopt HIST_FIND_NO_DUPS      # No mostrar duplicados en búsquedas
 
 # -----------------------------------------------------
 # Prompt

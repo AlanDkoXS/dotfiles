@@ -57,3 +57,32 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias res1='xrandr --output DisplayPort-0 --mode 2560x1440 --rate 120'
 alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
 alias setkb='setxkbmap de;echo "Keyboard set back to de."'
+
+# -----------------------------------------------------
+# Apps que uso
+# -----------------------------------------------------
+# alias boxy='qutebrowser https://boxy-svg.com/app'
+alias zen='/opt/zen/zen'
+alias zed="env -u WAYLAND_DISPLAY zed"
+alias agile='qutebrowser https://agilefingers.com/es/curso'
+alias slack='qutebrowser https://app.slack.com/client/T07J68HS0K1/C07K9JMRA64'
+alias coursera='qutebrowser https://www.coursera.org/programs/gestion-de-proyectos-google-2024-xdah9'
+
+# -----------------------------------------------------
+# Atajos para comandos
+# -----------------------------------------------------
+alias comandos="glow -p ~/Comandos\ Linux\ y\ Utilidades.md"
+alias pinstall="sudo pacman -S"
+alias yinstall="yay -S"
+alias cnvim="glow -p ~/Atajos\ Nvim.md"
+alias ccode="glow -p ~/Atajos\ Code.md"
+alias puninstall="sudo pacman -Rns"
+alias yuninstall="yay -Rns"
+
+# -----------------------------------------------------
+# Custom CSS
+# -----------------------------------------------------
+# VS Code
+# alias customcss='sudo chown -R $(whoami) "$(which code)" && sudo chown -R $(whoami) /usr/lib/code'
+# Code OSS
+alias customcss='sudo chown -R $(whoami) /usr/bin/code && sudo chown -R $(whoami) /usr/lib/code'
