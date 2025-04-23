@@ -81,6 +81,8 @@ alias yuninstall="yay -Rns"
 alias newalias="nvim ~/dotfiles/.config/zshrc/25-aliases"
 alias quteconfig="nvim ~/.config/qutebrowser/config.py"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
+alias q="exit"
+alias :q="exit"
 
 # -----------------------------------------------------
 # Custom CSS for Code

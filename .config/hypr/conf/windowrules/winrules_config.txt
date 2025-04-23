@@ -2,21 +2,51 @@
 # Window rules
 # -----------------------------------------------------
 
-# Dialog Windows
+#Dialog Windows
+
+#Center
+windowrulev2 = center, class:.*,title:^(.*(F|f)ile.*|.*(A|a)rchivo.*)$
+windowrulev2 = center, class:.*,title:^(.*(O|o)pen.*|.*(A|a)brir.*)$
+windowrulev2 = center, class:.*,title:^(.*(S|s)ave.*|.*(G|g)uardar.*)$
+windowrulev2 = center, class:.*,title:^(.*(F|f)older.*|.*(C|c)arpeta.*)$
+windowrulev2 = center, class:.*,title:^(.*(D|d)irectory.*|.*(D|d)irectorio.*)$
+windowrulev2 = center, class:.*,title:^(.*(S|s)elect.*|.*(S|s)eleccionar.*)$
+windowrulev2 = center, class:.*,title:^(.*(C|c)hoose.*|.*(E|e)legir.*)$
+windowrulev2 = center, class:.*,title:^(.*(D|d)ialog.*|.*(D|d)iálogo.*)$
+windowrulev2 = center, class:.*,title:^(.*(P|p)rogress.*|.*(P|p)rogreso.*)$
+windowrulev2 = center, class:.*,title:^(.*(D|d)ownload.*|.*(D|d)escarga.*)$
+windowrulev2 = center, class:.*,title:^(.*(E|e)rror.*)$
+windowrulev2 = center, class:.*,title:^(.*(W|w)arning.*|.*(A|a)dverten.*)$
+windowrulev2 = center, class:.*,title:^(.*(C|c)onfirm.*|.*(C|c)onfirm.*)$
+
 windowrulev2 = float, class:.*,title:^(Open File)(.*)$
+windowrulev2 = float, class:.*,title:^(Open Folder)(.*)$
 windowrulev2 = float, class:.*,title:^(Save As)(.*)$
 windowrulev2 = float, class:.*,title:^(Save File)(.*)$
 windowrulev2 = float, class:.*,title:^(File Operation)(.*)$
 windowrulev2 = float, class:.*,title:^(Choose a file)(.*)$
 windowrulev2 = float, class:.*,title:^(Select a File)(.*)$
+windowrulev2 = float, class:^(file-roller)$
+windowrulev2 = float, class:^(notification)$
 windowrulev2 = float, class:.*,title:^(Abrir archivo)(.*)$
+windowrulev2 = float, class:.*,title:^(Abrir carpeta)(.*)$
 windowrulev2 = float, class:.*,title:^(Guardar como)(.*)$
 windowrulev2 = float, class:.*,title:^(Guardar archivo)(.*)$
 windowrulev2 = float, class:.*,title:^(Operación de archivo)(.*)$
 windowrulev2 = float, class:.*,title:^(Elegir un archivo)(.*)$
 windowrulev2 = float, class:.*,title:^(Seleccionar un archivo)(.*)$
+windowrulev2 = float, class:.*,title:^(.*)(Diálogo)(.*)$
+windowrulev2 = float, class:^(descarga)$
+windowrulev2 = float, class:^(descargar)$
+windowrulev2 = float, class:^(Descarga)$
+windowrulev2 = float, class:^(Descargar)$
+windowrulev2 = float, class:^(progreso_archivo)$
+windowrulev2 = float, class:^(notificación)$
+windowrulev2 = float, class:^(error)$
+windowrulev2 = float, class:^(confirmar_reinicio)$
+windowrulev2 = float, class:^(diálogo)$
 
-# Navegadores
+# Browsers
 windowrule = tile, class:^(Microsoft-edge)$
 windowrule = tile, class:^(Brave-browser)$
 windowrule = tile, class:^(Chromium)$
@@ -50,12 +80,22 @@ windowrule = move 100%-260 30, class:^(pomotroid)$
 # windowrule = float, class:^(gnome-pomodoro)$
 # windowrule = move 100%-260 30, class:^(gnome-pomodoro)$
 
-# Obsidian: espacio de trabajo 10, pantalla completa
+# Obsidian Rules
 windowrule = workspace 10, class:^(obsidian)$
-windowrule = fullscreen, class:^(obsidian)$
+#windowrule = fullscreen, class:^(obsidian)$
 
-# VSCodium: pantalla completa
-# windowrule = fullscreen, class:^(codium)$
+# Reglas para Code/Codium/Code-OSS
+# VS Code
+windowrulev2 = workspace 9 silent, class:^(code)$
+windowrulev2 = fullscreen, class:^(code)$
+
+# VSCodium
+windowrulev2 = workspace 9 silent, class:^(codium)$
+windowrulev2 = fullscreen, class:^(codium)$
+
+# Code-OSS
+windowrulev2 = workspace 9 silent, class:^(code-oss)$
+windowrulev2 = fullscreen, class:^(code-oss)$
 
 # Slack en Qutebrowser
 windowrulev2 = float, class:^(org.qutebrowser.qutebrowser)$, title:^(.+slack.+)$
