@@ -81,10 +81,10 @@ windowrule = move 100%-260 30, class:^(pomotroid)$
 # windowrule = move 100%-260 30, class:^(gnome-pomodoro)$
 
 # Obsidian Rules
-windowrule = workspace 10, class:^(obsidian)$
+windowrule = workspace 10, silent, class:^(obsidian)$
 #windowrule = fullscreen, class:^(obsidian)$
 
-# Reglas para Code/Codium/Code-OSS
+# Code Rules
 # VS Code
 windowrulev2 = workspace 9 silent, class:^(code)$
 windowrulev2 = fullscreen, class:^(code)$
