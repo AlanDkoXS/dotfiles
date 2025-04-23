@@ -2,6 +2,20 @@
 # Window rules
 # -----------------------------------------------------
 
+# Dialog Windows
+windowrulev2 = float, class:.*,title:^(Open File)(.*)$
+windowrulev2 = float, class:.*,title:^(Save As)(.*)$
+windowrulev2 = float, class:.*,title:^(Save File)(.*)$
+windowrulev2 = float, class:.*,title:^(File Operation)(.*)$
+windowrulev2 = float, class:.*,title:^(Choose a file)(.*)$
+windowrulev2 = float, class:.*,title:^(Select a File)(.*)$
+windowrulev2 = float, class:.*,title:^(Abrir archivo)(.*)$
+windowrulev2 = float, class:.*,title:^(Guardar como)(.*)$
+windowrulev2 = float, class:.*,title:^(Guardar archivo)(.*)$
+windowrulev2 = float, class:.*,title:^(Operación de archivo)(.*)$
+windowrulev2 = float, class:.*,title:^(Elegir un archivo)(.*)$
+windowrulev2 = float, class:.*,title:^(Seleccionar un archivo)(.*)$
+
 # Navegadores
 windowrule = tile, class:^(Microsoft-edge)$
 windowrule = tile, class:^(Brave-browser)$

@@ -23,7 +23,7 @@ alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
 # ML4W Apps
 # -----------------------------------------------------
 alias ml4w='flatpak run com.ml4w.welcome'
-alias ml4w-settings='flatpak run com.ml4w.settings'
+alias ml4w-setting='flatpak run com.ml4w.settings'
 alias ml4w-calendar='flatpak run com.ml4w.calendar'
 alias ml4w-hyprland='com.ml4w.hyprland.settings'
 alias ml4w-sidebar='flatpak run com.ml4w.sidebar'
@@ -59,7 +59,7 @@ alias res2='xrandr --output DisplayPort-0 --mode 1920x1080 --rate 120'
 alias setkb='setxkbmap de;echo "Keyboard set back to de."'
 
 # -----------------------------------------------------
-# Apps que uso
+# My Apps
 # -----------------------------------------------------
 # alias boxy='qutebrowser https://boxy-svg.com/app'
 alias zen='/opt/zen/zen'
@@ -69,7 +69,7 @@ alias slack='qutebrowser https://app.slack.com/client/T07J68HS0K1/C07K9JMRA64'
 alias coursera='qutebrowser https://www.coursera.org/programs/gestion-de-proyectos-google-2024-xdah9'
 
 # -----------------------------------------------------
-# Atajos para comandos
+# Command Shortcuts
 # -----------------------------------------------------
 alias comandos="glow -p ~/Comandos\ Linux\ y\ Utilidades.md"
 alias pinstall="sudo pacman -S"
@@ -78,9 +78,12 @@ alias cnvim="glow -p ~/Atajos\ Nvim.md"
 alias ccode="glow -p ~/Atajos\ Code.md"
 alias puninstall="sudo pacman -Rns"
 alias yuninstall="yay -Rns"
+alias newalias="nvim ~/dotfiles/.config/zshrc/25-aliases"
+alias quteconfig="nvim ~/.config/qutebrowser/config.py"
+alias nvimconfig="nvim ~/.config/nvim/init.lua"
 
 # -----------------------------------------------------
-# Custom CSS
+# Custom CSS for Code
 # -----------------------------------------------------
 # VS Code
 # alias customcss='sudo chown -R $(whoami) "$(which code)" && sudo chown -R $(whoami) /usr/lib/code'
