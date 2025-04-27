@@ -1,12 +1,14 @@
 # -----------------------------------------------------
 # CUSTOMIZATION
 # -----------------------------------------------------
-POSH=agnoster
+#POSH=agnoster
 
 # -----------------------------------------------------
-# oh-myzsh themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# OH-MY-ZSH
 # -----------------------------------------------------
+# oh-myzsh themes: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME=robbyrussell
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # -----------------------------------------------------
 # oh-myzsh plugins
@@ -51,7 +53,7 @@ setopt HIST_FIND_NO_DUPS      # No mostrar duplicados en búsquedas
 # Prompt
 # -----------------------------------------------------
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/EDM115-newline.omp.json)"
+#eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/EDM115-newline.omp.json)"
 
 # Shipped Theme
 # eval "$(oh-my-posh init zsh --config /usr/share/oh-my-posh/themes/agnoster.omp.json)"

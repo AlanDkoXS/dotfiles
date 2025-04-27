@@ -7,7 +7,6 @@ eval $(thefuck --alias FUCK)
 eval "$(zoxide init zsh)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-
 # -----------------------------------------------------
 # Exports
 # -----------------------------------------------------
@@ -36,4 +35,3 @@ function ya() {
     fi
     rm -f -- "$tmp"
 }
-

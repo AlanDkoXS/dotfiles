@@ -33,6 +33,7 @@ alias ml4w-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
 alias ml4w-hyprland-diagnosis='~/.config/hypr/scripts/diagnosis.sh'
 alias ml4w-qtile-diagnosis='~/.config/ml4w/qtile/scripts/diagnosis.sh'
 alias ml4w-update='~/.config/ml4w/update.sh'
+alias update='~/.config/ml4w/update.sh'
 
 # -----------------------------------------------------
 # Window Managers

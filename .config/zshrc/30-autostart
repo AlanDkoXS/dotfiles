@@ -10,14 +10,33 @@
 # -----------------------------------------------------
 # Fastfetch
 # -----------------------------------------------------
-if [[ $(tty) == *"pts"* ]]; then
-    fastfetch --config examples/12
+# Defer execution until after prompt initialization
+if [[ ! -o interactive ]]; then
+  # Non-interactive shell, skip
+  :
 else
+  # Interactive shell, execute immediately
+  if [[ $(tty) == *"pts"* ]]; then
+    fastfetch --config examples/12
+  else
     echo
     if [ -f /bin/qtile ]; then
-        echo "Start Qtile X11 with command Qtile"
+      echo "Start Qtile X11 with command Qtile"
     fi
     if [ -f /bin/hyprctl ]; then
-        echo "Start Hyprland with command Hyprland"
+      echo "Start Hyprland with command Hyprland"
     fi
+  fi
 fi
+
+#-----------------------------------------------------
+# Enable Powerlevel10k instant prompt
+# -----------------------------------------------------
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n] confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+#
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -34,13 +34,13 @@ return {
         vim.cmd("TransparentEnable") -- execute the command to enable transparency
       end,
     },
-    { "rktjmp/lush.nvim" },
-    "anAcc22/sakura.nvim",
-    config = function()
-      vim.opt.background = "dark"
-      vim.cmd("colorscheme sakura")
-    end,
-  },
+--  --  { "rktjmp/lush.nvim" },
+-- -- "anAcc22/sakura.nvim",
+--    config = function()
+--      vim.opt.background = "dark"
+--      vim.cmd("colorscheme sakura")
+--    end,
+--  },
   {
     -- Plugin for the Catppuccin color scheme
     "catppuccin/nvim",
