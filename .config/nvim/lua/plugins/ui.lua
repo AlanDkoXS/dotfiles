@@ -157,7 +157,16 @@ return {
     {
         "folke/snacks.nvim",
         opts = {
-            image = {},
+            image = {
+                enabled = true,         -- Enable image support
+                source = vim.fn.stdpath("config") .. "/assets/aq.png", -- Path to the image you want to display
+                -- Or use a function to dynamically select an image
+                -- source = function() return "path/to/image-" .. math.random(1, 10) .. ".png" end,
+                width = 50,             -- Width of the image (in cells)
+                height = 50,            -- Height of the image (in cells)
+                position = "center",    -- Position: "top", "center" or "bottom"
+                hl = "SnacksNormal",    -- Highlight group
+            },
             picker = {
                 matcher = {
                     fuzzy = true,
@@ -187,39 +196,26 @@ return {
                 },
                 preset = {
                     header = [[
-                                  .
-                                & ..
-                            && & +  .
-                            &&  .&;X.&              &:X&
-                            &   .+.&x.&   &&&&&&   .  .;&
-                            ..  &&+    & &.&&&&&&& ..&..&
-                           &&&& & X&&&&&.&&&&&&&   &&.   &   &&&
-                           &&$&&&&&&&&&&&.X&&&&&  ;&&.;&.&&&&&&&&
-                           &&&..$&&& .&&&..&&+&&&  &&.. .&&&& &&    &
-                           .$.&:&   ..   ..+:.&&&&$&&&&&.$&&.&&&& &&
-                          &.&&X&;$$$. . ....&& &&$ x&&&.&&& &&&&&.&&
-                           +&&&&&&$&&&;..$.&...x:.& &..&&&&&&&&&:&&
-                        &;&&..;& ;  .&.   ..&&x..; &:&& &&&&&&&&&&
-                      &. & .$....&....& && && & ..&. &.&&&&&+&&&&&
-                     &&.&&&&&.&&&&&&&&&x&x& .&.   $&&&&.&&&..&.&&
-                     &&&&. :&:   ;.&+     &&&&&  &. .&& &&&&&&&&&
-                      &&.    &  :&&&&&&&&..X &: :&&&..... &.&&&&&
-                       .;&&&&.&.: &&&&&&&&.&.$x...& .&&.;& $..&&&&
-                      &x&&&&& & &&&&&&&&&&. &&&  .&    .&&&..&.&&&
-                       +&&&&&&+& &&&&&&&&&.&&&&&          &&&&X$&&
-                       &&&xx&&&.   &&&&&&  .&&&;            &&&&&&&
-                        &...&&x. &.& .&&      .X            &&&&$&&
-                       ..  ..     &     X   &&&&&&&      .; ;&&&&&&
-                       $.+       x      ..&&&&&&&&+.&..$: :&&&&&&&&
-                       &&&     +X    ..&&&&&&. x&&&&&& ..&&$&&&&&&
-                        $.: +...    X..&.& & .&&&&;&.  &&&&&&&&&&&
-                        &&&&&&&.&.&.;&&&. .  &&&&&..&&&&&&&&&&&&&&
-                       X& ;  &&: $ &x&X&:&   &&&&&&&&&&&&&&&&&&&&&
-                       &x x& x        ; .. &.&&&&&&&&&&&&&&&&&&&
-                       &               .&   &&&&&&&&&&&&&&&
-                       &        &&&;&&.&X .&&&&&&&&
-                       &&&&&&&&&&&&&&&&&&&&&&&&&
-                           &&&&&       &&&&&&&
+
+
+                     .;ok0XNx  ,NNKxo;.
+     .;lxkOx,     .lKMMK',MMO  .    XMMKl.
+        :MMMMNd''kMMd.    MMO  ;       .MMO'
+            oMMMMMl.      MMO  ;.         MMO.
+             ;MMMMK,      MMO  ;X          oMW:
+             WMK. xMO     MMO  ;Md          lMM:
+            XMM.    0N,   MMO  ;MM.          KMM
+           .MMO      .Md  MMO  ;MMW.         'MM;
+           'MM;        kO.MMO  ;MMcWc         MMo
+           .MM;         :KMMO  ;MM. WO       .MMl
+            MM0          :MMO  ;MM.  kWc     xMM'
+            :MM;          OMO  ;MM.   ,M0,  .MMK
+             oMM;          MO  ;MM.     0MKcWMX.
+              'MMd         ,k  ;MM.      .MMMMO
+                kMNl        d  ;MM.     :XMWNMMM0l,.
+                  lMWk:.    .  ;MM. .ckNMK.    MMMMMXkl.
+                     xMMW0xdo  ;MMXWMMO.
+                                 ..
 ]],
                     -- stylua: ignore
                     ---@type snacks.dashboard.Item[]
