@@ -1,1 +1,1 @@
-blur1
+blur1-brightness80
