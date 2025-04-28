@@ -84,6 +84,9 @@ alias quteconfig="nvim ~/.config/qutebrowser/config.py"
 alias nvimconfig="nvim ~/.config/nvim/init.lua"
 alias q="exit"
 alias :q="exit"
+alias y="yazi"
+alias timer="clockify & pomotroid &"
+alias t="timer"
 
 # -----------------------------------------------------
 # Custom CSS for Code

@@ -61,9 +61,10 @@ windowrulev2 = pin, title:^(Picture-in-Picture)$
 windowrulev2 = move 69.5% 4%, title:^(Picture-in-Picture)$
 
 # Clockify
-# windowrule = float, class:^(Clockify)$
-# windowrule = size 515 640, class:^(Clockify)$
-# windowrule = move 833 67, class:^(Clockify)$
+windowrule = float, class:^(Clockify)$
+windowrule = size 686 640, class:^(Clockify)$
+windowrule = move 57 89, class:^(Clockify)$
+windowrule = workspace 4, silent, class:^(Clockify)$
 
 # Pomodorolm: esquina superior derecha, flotante
 windowrule = size 240 325, class:^(pomodorolm)$
@@ -71,9 +72,10 @@ windowrule = float, class:^(pomodorolm)$
 windowrule = move 100%-260 30, class:^(pomodorolm)$
 
 # Pomotroid: esquina superior derecha, flotante
-windowrule = size 240 325, class:^(pomotroid)$
+windowrule = size 360 478, class:^(pomotroid)$
 windowrule = float, class:^(pomotroid)$
-windowrule = move 100%-260 30, class:^(pomotroid)$
+windowrule = move 834 89, class:^(pomotroid)$
+windowrule = workspace 4, silent, class:^(pomotroid)$
 
 # gnome-pomodoro: esquina superior derecha, flotante
 # windowrule = size 240 325, class:^(gnome-pomodoro)$
