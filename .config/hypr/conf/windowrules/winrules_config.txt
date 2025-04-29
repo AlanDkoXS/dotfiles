@@ -46,6 +46,17 @@ windowrulev2 = float, class:^(error)$
 windowrulev2 = float, class:^(confirmar_reinicio)$
 windowrulev2 = float, class:^(diálogo)$
 
+# Avoid Not Responding Application
+windowrule = noanim, title:^Application Not Responding$
+windowrule = nofocus, title:^Application Not Responding$
+windowrule = noborder, title:^Application Not Responding$
+windowrule = noshadow, title:^Application Not Responding$
+windowrule = opaque, title:^Application Not Responding$
+windowrule = float, title:^Application Not Responding$
+windowrule = size 1,1, title:^Application Not Responding$
+windowrule = center, title:^Application Not Responding$
+windowrule = move 0 -1000, title:^Application Not Responding$
+
 # Browsers
 windowrule = tile, class:^(Microsoft-edge)$
 windowrule = tile, class:^(Brave-browser)$

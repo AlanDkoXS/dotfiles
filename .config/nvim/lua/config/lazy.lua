@@ -60,7 +60,8 @@ require("lazy").setup({
         }, -- AI plugins
         {
             import = "lazyvim.plugins.extras.ai.copilot",
-        }, -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+        },
+        { import = "lazyvim.plugins.extras.ai.copilot-chat" },
         -- Import/override with your plugins
         {
             import = "plugins",
@@ -90,7 +91,7 @@ require("lazy").setup({
                 -- "netrwPlugin",
                 "tarPlugin",
                 "tohtml",
-                "tutor",
+                -- "tutor",
                 "zipPlugin",
             },
         },
