@@ -1,1 +1,1 @@
-nautilus
+yazi

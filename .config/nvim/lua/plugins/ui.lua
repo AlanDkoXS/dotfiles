@@ -30,9 +30,9 @@ return {
                     view = "cmdline", -- Use the cmdline view for the command-line
                 },
                 presets = {
-                    bottom_search = true,   -- Enable bottom search view
+                    bottom_search = true, -- Enable bottom search view
                     command_palette = true, -- Enable command palette view
-                    lsp_doc_border = true,  -- Enable LSP documentation border
+                    lsp_doc_border = true, -- Enable LSP documentation border
                 },
                 -- Uncomment the following lines to customize the cmdline popup view
                 -- views = {
@@ -52,11 +52,11 @@ return {
     -- Description: A Neovim plugin for viewing documentation.
     {
         "amrbashir/nvim-docs-view",
-        lazy = true,            -- Load this plugin lazily
+        lazy = true, -- Load this plugin lazily
         cmd = "DocsViewToggle", -- Command to toggle the documentation view
         opts = {
             position = "right", -- Position the documentation view on the right
-            width = 60,         -- Set the width of the documentation view
+            width = 60, -- Set the width of the documentation view
         },
     },
 
@@ -65,11 +65,11 @@ return {
     -- Description: A blazing fast and easy to configure Neovim statusline plugin.
     {
         "nvim-lualine/lualine.nvim",
-        event = "VeryLazy",                                       -- Load this plugin on the 'VeryLazy' event
+        event = "VeryLazy", -- Load this plugin on the 'VeryLazy' event
         requires = { "nvim-tree/nvim-web-devicons", opt = true }, -- Optional dependency for icons
         opts = {
             options = {
-                theme = "auto",       -- Set the theme for lualine
+                theme = "auto", -- Set the theme for lualine
                 icons_enabled = true, -- Enable icons in the statusline
             },
             sections = {
@@ -89,22 +89,21 @@ return {
     {
         "b0o/incline.nvim",
         event = "BufReadPre", -- Load this plugin before reading a buffer
-        priority = 1200,      -- Set the priority for loading this plugin
+        priority = 1200, -- Set the priority for loading this plugin
         config = function()
             require("incline").setup({
                 window = { margin = { vertical = 0, horizontal = 1 } }, -- Set the window margin
                 hide = {
-                    cursorline = true,                                  -- Hide the incline window when the cursorline is active
+                    cursorline = true, -- Hide the incline window when the cursorline is active
                 },
                 render = function(props)
                     local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t") -- Get the filename
                     if vim.bo[props.buf].modified then
-                        filename = "[+] " ..
-                            filename -- Indicate if the file is modified
+                        filename = "[+] " .. filename -- Indicate if the file is modified
                     end
 
                     local icon, color = require("nvim-web-devicons").get_icon_color(filename) -- Get the icon and color for the file
-                    return { { icon, guifg = color }, { " " }, { filename } }                 -- Return the rendered content
+                    return { { icon, guifg = color }, { " " }, { filename } } -- Return the rendered content
                 end,
             })
         end,
@@ -142,10 +141,10 @@ return {
         cmd = "ZenMode", -- Command to toggle Zen Mode
         opts = {
             plugins = {
-                gitsigns = true,                          -- Enable gitsigns integration
-                tmux = true,                              -- Enable tmux integration
+                gitsigns = true, -- Enable gitsigns integration
+                tmux = true, -- Enable tmux integration
                 kitty = { enabled = false, font = "+2" }, -- Disable kitty integration and set font size
-                twilight = { enabled = true },            -- Enable twilight integration
+                twilight = { enabled = true }, -- Enable twilight integration
             },
         },
         keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } }, -- Keybinding to toggle Zen Mode
@@ -158,14 +157,14 @@ return {
         "folke/snacks.nvim",
         opts = {
             image = {
-                enabled = true,         -- Enable image support
-                source = vim.fn.stdpath("config") .. "/assets/aq.png", -- Path to the image you want to display
+                enabled = true, -- Enable image support
+                source = "", -- Path to the image you want to display
                 -- Or use a function to dynamically select an image
                 -- source = function() return "path/to/image-" .. math.random(1, 10) .. ".png" end,
-                width = 50,             -- Width of the image (in cells)
-                height = 50,            -- Height of the image (in cells)
-                position = "center",    -- Position: "top", "center" or "bottom"
-                hl = "SnacksNormal",    -- Highlight group
+                width = 50, -- Width of the image (in cells)
+                height = 50, -- Height of the image (in cells)
+                position = "center", -- Position: "top", "center" or "bottom"
+                hl = "SnacksNormal", -- Highlight group
             },
             picker = {
                 matcher = {
@@ -177,11 +176,11 @@ return {
                 sources = {
                     explorer = {
                         matcher = {
-                            fuzzy = true,          -- Enables fuzzy matching, so you can be a bit imprecise with your search terms
-                            smartcase = true,      -- If your search term has uppercase letters, the search becomes case-sensitive
-                            ignorecase = true,     -- Ignores case when searching, unless smartcase is triggered
+                            fuzzy = true, -- Enables fuzzy matching, so you can be a bit imprecise with your search terms
+                            smartcase = true, -- If your search term has uppercase letters, the search becomes case-sensitive
+                            ignorecase = true, -- Ignores case when searching, unless smartcase is triggered
                             filename_bonus = true, -- Gives a higher priority to matches in filenames
-                            sort_empty = false,    -- If no matches are found, it won't sort the results
+                            sort_empty = false, -- If no matches are found, it won't sort the results
                         },
                     },
                 },
@@ -190,33 +189,40 @@ return {
                 sections = {
                     { section = "header" },
                     { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
-                    { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-                    { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+                    {
+                        icon = " ",
+                        title = "Recent Files",
+                        section = "recent_files",
+                        indent = 2,
+                        padding = 1,
+                    },
+                    {
+                        icon = " ",
+                        title = "Projects",
+                        section = "projects",
+                        indent = 2,
+                        padding = 1,
+                    },
                     { section = "startup" },
                 },
                 preset = {
                     header = [[
 
-
-                     .;ok0XNx  ,NNKxo;.
-     .;lxkOx,     .lKMMK',MMO  .    XMMKl.
-        :MMMMNd''kMMd.    MMO  ;       .MMO'
-            oMMMMMl.      MMO  ;.         MMO.
-             ;MMMMK,      MMO  ;X          oMW:
-             WMK. xMO     MMO  ;Md          lMM:
-            XMM.    0N,   MMO  ;MM.          KMM
-           .MMO      .Md  MMO  ;MMW.         'MM;
-           'MM;        kO.MMO  ;MMcWc         MMo
-           .MM;         :KMMO  ;MM. WO       .MMl
-            MM0          :MMO  ;MM.  kWc     xMM'
-            :MM;          OMO  ;MM.   ,M0,  .MMK
-             oMM;          MO  ;MM.     0MKcWMX.
-              'MMd         ,k  ;MM.      .MMMMO
-                kMNl        d  ;MM.     :XMWNMMM0l,.
-                  lMWk:.    .  ;MM. .ckNMK.    MMMMMXkl.
-                     xMMW0xdo  ;MMXWMMO.
-                                 ..
-]],
+                    █████▒  █████
+      ███████▒   ████▓▒██▒  ▒  █████▒
+         █████████▓▒   ██▒  ▒      ███▒
+             ████▒     ██▒  █▒      ████
+            ███▒███▒   ██▒  █▒        ███
+            ███▒  ██▒  ██▒  ██▒        ██▒
+           ███▒    ███ ██▒  ███▒       ███▒
+           ███▒      ████▒  ████▒      ███▒
+           ███▒       ███▒  ██▒███     ███▒
+            ██▒        ██▒  ██▒  ██▒   ██▒
+            ███▒        █▒  ██▒   ███▒███▒
+             ████       █▒  ██▒     ████▒
+               ███▓      ▒  ██▒    █████████
+                 █████   ▒  ██▒█████▒▒  ███████▒
+                    █████▒  █████▒▒]],
                     -- stylua: ignore
                     ---@type snacks.dashboard.Item[]
                     keys = {
